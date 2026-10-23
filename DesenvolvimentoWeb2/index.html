@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Incentivo à Leitura Comunitária</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Projeto Ciranda da Leitura</h1>
+    <p>Conectando pessoas através da troca e doação de livros na nossa comunidade.</p>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#estatisticas">Estatísticas</a></li>
+        <li><a href="#midia">Vídeo</a></li>
+        <li><a href="#doe">Cadastrar Livro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="sobre">
+      <h2>O Problema da Leitura no Brasil</h2>
+      
+      <article>
+        <h3>Por qual motivo devemos incentivar a Leitura?</h3>
+        <p>
+          Muitas pessoas não possuem acesso facilitado a livros físicos devido ao alto custo. 
+          Ao mesmo tempo, diversas famílias possuem livros parados nas estantes pegando poeira.
+        </p>
+        
+        <img src="Matilda.jpg" alt="Matilda lendo livro" width="400" height="300">
+
+        <p>Segundo a pesquisa recente do <abbr title="Instituto Brasileiro de Geografia e Estatística">IBGE</abbr>:</p>
+        <blockquote>
+          <q>A leitura transforma o pensamento crítico e expande as oportunidades de cidadania.</q>
+          <cite>— Pesquisa Retratos da Leitura no Brasil</cite>
+        </blockquote>
+
+        <p>
+          Para saber mais sobre projetos nacionais de incentivo, acesse o site do 
+          <a href="https://www.gov.br/cultura/pt-br" target="_blank">Ministério da Cultura</a>.
+        </p>
+      </article>
+
+      <h3>Benefícios da Troca Comunitária:</h3>
+      <ul>
+        <li>Acesso gratuito a novas histórias</li>
+        <li>Sustentabilidade e reuso de papel</li>
+        <li>Fortalecimento dos laços no bairro</li>
+      </ul>
+    </section>
+
+    <section id="estatisticas">
+      <h2>Estatísticas de Leitura por Região</h2>
+      <p>Abaixo estão os dados médios de livros lidos por habitante ao ano:</p>
+      
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Região</th>
+            <th>Média de Livros/Ano</th>
+            <th>Principais Obstáculos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Norte</td>
+            <td>2,4</td>
+            <td>Preço elevado e falta de bibliotecas</td>
+          </tr>
+          <tr>
+            <td>Nordeste</td>
+            <td>2,2</td>
+            <td>Falta de tempo e acesso reduzido</td>
+          </tr>
+          <tr>
+            <td>Sudeste</td>
+            <td>3,0</td>
+            <td>Concorrência com telas e internet</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="midia">
+      <h2>A leitura possui inúmeros beneficios!</h2>
+      <p>Assista ao vídeo abaixo para entender o que acontece quando se cria o hábito de ler:</p>
+      <iframe 
+        width="100%" 
+        height="400" 
+        src="https://www.youtube.com/embed/BtFHTJZuOWE?si=0sNu-nXGxuBvVQPy"
+        title="Vídeo sobre leitura" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="doe">
+      <h2>Cadastre um Livro para Doação ou Troca</h2>
+      <p>Preencha os campos abaixo para disponibilizar um livro para a comunidade.</p>
+
+      <form id="form-cadastro" action="#" method="POST">
+        
+        <div>
+          <label for="nome-usuario">Seu Nome Completo:</label><br>
+          <input type="text" id="nome-usuario" name="nome-usuario" placeholder="Ex: Ana Paula" required>
+        </div>
+
+        <div>
+          <label for="email-usuario">Seu E-mail de Contato:</label><br>
+          <input type="email" id="email-usuario" name="email-usuario" placeholder="seuemail@email.com" required>
+        </div>
+
+        <div>
+          <label for="titulo-livro">Título do Livro:</label><br>
+          <input type="text" id="titulo-livro" name="titulo-livro" placeholder="Ex: Jogos Vorazes" required>
+        </div>
+
+        <div>
+          <label for="categoria-livro">Gênero / Categoria:</label><br>
+          <select id="categoria-livro" name="categoria-livro" required>
+            <option value="">Selecione uma opção...</option>
+            <option value="Ficção / Literatura">Ficção / Literatura</option>
+            <option value="Estudos / Didático">Estudos / Didático</option>
+            <option value="Infantil">Infantil</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="estado-livro">Estado de Conservação:</label><br>
+          <input type="radio" id="novo" name="estado-livro" value="novo">
+          <label for="novo">Novo / Seminovo</label><br>
+          <input type="radio" id="usado" name="estado-livro" value="usado" checked>
+          <label for="usado">Usado (em bom estado)</label>
+        </div>
+
+        <div>
+          <label for="observacoes">Informações Adicionais:</label><br>
+          <textarea id="observacoes" name="observacoes" rows="4" placeholder="Ex: Ponto de encontro preferencial..."></textarea>
+        </div>
+
+        <div>
+          <button type="submit">Enviar Cadastro</button>
+          <button type="reset">Limpar Formulário</button>
+        </div>
+
+      </form>
+
+      <div id="resultado"></div>
+    </section>
+
+  </main>
+
+  <aside>
+    <h3>Dica do Leitor!</h3>
+    <p>Reserve 15 minutos do seu dia antes de dormir para ler. Ao final de um mês, você terá lido um livro inteiro!</p>
+  </aside>
+
+  <footer>
+    <p>&copy; Projeto Ciranda da Leitura: Todos os direitos reservados.</p>
+    <p>Desenvolvido para a disciplina de Desenvolvimento Web.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
